@@ -8,6 +8,9 @@ package tresenraya;
  *
  * @author gabriel
  */
-public class ComputerPlayer {
-    
+public class ComputerPlayer extends Player{
+    @Override
+    Move makeMove(){
+        return new Move();
+    }
 }

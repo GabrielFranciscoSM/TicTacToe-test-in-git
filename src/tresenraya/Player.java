@@ -10,6 +10,13 @@ package tresenraya;
  */
 abstract public class Player {
     private char mark;
+    Game game = new Game();
     
-    abstract Move makeMove();
+    void makeMove(){
+        Move move = game.getPlayerInput();
+        
+        while(game.getBoard().isValidMove(move)){
+            move = game.getPlayerInput();
+        }
+    }
 }

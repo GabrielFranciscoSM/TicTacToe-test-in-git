@@ -3,13 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package tresenraya;
-
+import Controller.Controller;
 /**
  *
  * @author gabriel
  */
 public class TresEnRaya {
-
+    
+    Game game = new Game();
+    
     /**
      * @param args the command line arguments
      */

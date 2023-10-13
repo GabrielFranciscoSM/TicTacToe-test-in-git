@@ -12,6 +12,14 @@ public class Board {
     
     char[][] cells = new char[3][3];
     
+    Board(){
+        for(int i = 0; i < 3; ++i){
+            for(int j = 0; j < 3; ++j){
+                cells[i][j] =  ' ';
+            }
+        }
+    }
+    
     boolean isValidMove(Move m){
         return true;
     }

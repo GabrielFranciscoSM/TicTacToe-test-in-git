@@ -4,6 +4,8 @@
  */
 package tresenraya;
 
+import Controller.Controller;
+
 /**
  *
  * @author gabriel
@@ -14,7 +16,19 @@ public class Game {
     Player player2;
     Player currPlayer;
     
+    Controller controller = new Controller();
+    
     void play(){
-        
+        do{
+            currPlayer.makeMove();
+        }
+    }
+    
+    Board getBoard(){
+        return board;
+    }
+    
+    Move getPlayerInput(){
+        return controller.getPlayerInput();
     }
 }
