@@ -6,6 +6,8 @@ package View;
 
 import java.util.Scanner;
 import tresenraya.Move;
+import tresenraya.Board;
+
 /**
  *
  * @author gabriel
@@ -25,7 +27,13 @@ public class TextView {
         return stringToMove(input);
     }
     
+    public void makeMove(Board b){
+        
+    }
+    
     private Move stringToMove(String str){
         return new Move(Character.getNumericValue(str.charAt(0)), Character.getNumericValue(str.charAt(1)));
     }
+    
+    
 }

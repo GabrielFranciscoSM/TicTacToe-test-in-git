@@ -10,7 +10,7 @@ package tresenraya;
  */
 public class ComputerPlayer extends Player{
     @Override
-    Move makeMove(){
-        return new Move();
+    void makeMove(){
+        
     }
 }

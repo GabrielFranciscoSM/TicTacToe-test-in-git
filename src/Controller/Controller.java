@@ -5,6 +5,7 @@
 package Controller;
 import tresenraya.Game;
 import tresenraya.Move;
+import tresenraya.Board;
 import View.TextView;
 /**
  *
@@ -16,5 +17,9 @@ public class Controller {
     
     public Move getPlayerInput(){
         return txtView.getUserInput();
+    }
+    
+    public void makeMove(Board b){
+        txtView.makeMove(b);
     }
 }

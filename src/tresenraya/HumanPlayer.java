@@ -11,8 +11,14 @@ package tresenraya;
 public class HumanPlayer extends Player{
     
     @Override
-    Move makeMove(){
-        return new Move();
+    void makeMove(){
+                Move move = game.getPlayerInput();
+        
+        while(game.getBoard().isValidMove(move)){
+            move = game.getPlayerInput();
+        }
+        
+        game.getBoard().makeMove(move, mark);
     }
     
 }

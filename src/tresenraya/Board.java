@@ -11,6 +11,7 @@ package tresenraya;
 public class Board {
     
     char[][] cells = new char[3][3];
+    Game game = new Game();
     
     Board(){
         for(int i = 0; i < 3; ++i){
@@ -21,23 +22,30 @@ public class Board {
     }
     
     boolean isValidMove(Move m){
-        return true;
+        return (cells[m.row][m.row] == ' ');
     }
     
-    void makeMove(Move m){
-        
+    void makeMove(Move m, char mark){
+        cells[m.row][m.row] = mark;
     }
     
     void paint(){
-        
+        game.makeMove();
     }
     
-    void checkForWinner(){
+    boolean checkForWinner(){
         
     }
     
     boolean isFull(){
-        return true;
+        boolean full = true;
+        for(int i = 0; i < 3; ++i){
+            for(int j = 0; j < 3; ++j){
+                full &= cells[i][j] !=  ' ';
+            }
+        }
+        
+        return full;
     }
     
 }

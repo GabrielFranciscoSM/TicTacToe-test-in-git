@@ -9,14 +9,9 @@ package tresenraya;
  * @author gabriel
  */
 abstract public class Player {
-    private char mark;
+    char mark;
     Game game = new Game();
     
     void makeMove(){
-        Move move = game.getPlayerInput();
-        
-        while(game.getBoard().isValidMove(move)){
-            move = game.getPlayerInput();
-        }
     }
 }

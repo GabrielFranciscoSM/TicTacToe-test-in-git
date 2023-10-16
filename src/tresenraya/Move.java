@@ -21,4 +21,12 @@ public class Move {
         col = c;
         col = r;
     }
+    
+    int getCol(){
+        return col;
+    }
+    
+    int getRow(){
+        return row;
+    }
 }

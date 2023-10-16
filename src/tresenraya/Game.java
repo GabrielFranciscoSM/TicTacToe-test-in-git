@@ -19,9 +19,13 @@ public class Game {
     Controller controller = new Controller();
     
     void play(){
+        boolean end;
+                
         do{
             currPlayer.makeMove();
-        }
+            end = board.checkForWinner();
+            end |= board.isFull();
+        }while(!end);
     }
     
     Board getBoard(){
@@ -30,5 +34,9 @@ public class Game {
     
     Move getPlayerInput(){
         return controller.getPlayerInput();
+    }
+    
+    void makeMove(){
+        controller.makeMove(board);
     }
 }
